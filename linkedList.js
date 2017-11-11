@@ -1,4 +1,4 @@
-function printSimplyСonnectedList(list) {
+function passThroughLinkedList(list) {
   while (list) {
     console.log(list.value);
     list = list.next;
@@ -19,4 +19,4 @@ var list = {
   }
 };
 
-console.log(printSimplyСonnectedList(list));
+console.log(passThroughLinkedList(list));
