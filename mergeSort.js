@@ -8,10 +8,21 @@ function mergeSort(arr) {
 		left.push(arr[i]);
 	for (var i = half; i < arr.length; i++)
 		right.push(arr[i]);
-	
+
 	console.log(left, right);
 
 }
+
+
+function mergeSort(arr) {
+	for (var i = 0; i < arr.length - 1; i++) {
+		for (var j = 0; j < (arr.length-1)-1; j++) {
+			
+		}
+	}
+
+}
+
 
 
 console.log(mergeSort(arr));
