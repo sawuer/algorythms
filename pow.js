@@ -7,6 +7,8 @@ function pow(base, idx) {
 }
 
 
-console.log(pow(3, 2)); // 9
-console.log(pow(2, 2)); // 4
-console.log(pow(10, 5)); // 100000
+// console.log(pow(3, 2)); // 9
+// console.log(pow(2, 2)); // 4
+// console.log(pow(10, 5)); // 100000
+// console.log(pow(2, 8))
+console.log(pow(3, 1))
