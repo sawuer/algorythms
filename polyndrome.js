@@ -24,3 +24,11 @@ console.log(polyndrome('nomelonnolemon'));
 console.log(polyndrome('A man, a plan, a canal, Panama!'));
 console.log(polyndrome(32423));
 console.log(polyndrome());
+
+
+f (x) => x * 2x;
+
+f(12): 
+f(140):
+
+f(n) => 

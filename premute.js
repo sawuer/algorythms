@@ -1,17 +1,22 @@
-function permute(str) {
+function permutator(inputArr) {
+  var results = [];
 
-	function factorial(str) {
-		var res = str.length;
-		for (var i = str.length - 1; i > 0; i--) {
-			res *= i;
-		}
-		return res;
-	}
+  function permute(arr, memo) {
+    var cur, memo = memo || [];
 
+    for (var i = 0; i < arr.length; i++) {
+      cur = arr.splice(i, 1);
+      if (arr.length === 0) {
+        results.push(memo.concat(cur));
+      }
+      permute(arr.slice(), memo.concat(cur));
+      arr.splice(i, 0, cur[0]);
+    }
 
-	return factorial(str)
+    return results;
+  }
 
+  return permute(inputArr).map(i => i.join(''));
 }
 
-
-console.log(permute('abc')); // ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
+console.log(permutator(['a', 'b', 'c'])); // ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
