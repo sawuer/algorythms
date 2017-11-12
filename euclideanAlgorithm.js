@@ -30,3 +30,6 @@ function fac(n) {
 	return n < 2 ? n : n * fac(n - 1);
 }
 
+function euc(x, y) {
+	return x % y == 0 ? y : euc(y, x % y);
+}
