@@ -33,7 +33,7 @@ var Stack = (function() {
 
 
 var names = new Stack();
-
+console.log(names.prototype)
 
 names.push('Sowyer');
 names.push('Ramona');
