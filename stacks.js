@@ -23,7 +23,7 @@ var Stack = (function() {
 			return this.count;
 		},
 		peek() {
-			return this.storage[this.count-1];
+			return console.log(this.storage[this.count-1]);
 		}
 	}
 
@@ -33,12 +33,11 @@ var Stack = (function() {
 
 
 var names = new Stack();
-console.log(names.prototype)
 
-names.push('Sowyer');
+names.push({name: 'Sowyer', age: 22});
 names.push('Ramona');
 names.push('Linker');
 console.log(names);
-names.pop();
-// names.peek();
+console.log(names.pop());
+names.peek();
 console.log(names);
