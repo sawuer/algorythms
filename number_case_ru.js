@@ -1,8 +1,13 @@
 function number_case_ru(n) {
-	n += '', nEnd = n.slice(-1);
-	return n[n.length - 2] == 1 ? '5-0' :
-				 nEnd > 1 && nEnd < 5 ? '2-4' :
-				 nEnd == 1 ? '1' : '5-0';
+	n += '', end = n.slice(-1);
+	return n[n.length-2] == 1 ? '5-0' : end > 1 && end < 5 ? '2-4' : end == 1 ? '1' : '5-0';
+}
+
+function number_case_ru(n) {
+	var end = Math.exp(n)
+	console.log(end);
+	// n += '', end = n.slice(-1);
+	// return n[n.length-2] == 1 ? '5-0' : end > 1 && end < 5 ? '2-4' : end == 1 ? '1' : '5-0';
 }
 
 console.log(number_case_ru(0) == '5-0');
@@ -43,3 +48,5 @@ console.log(number_case_ru(118) == '5-0');
 console.log(number_case_ru(23219) == '5-0');
 console.log(number_case_ru(1120) == '5-0');
 console.log(number_case_ru(121) == '1');
+console.log(number_case_ru(2131121) == '1');
+console.log(number_case_ru(2131122) == '2-4');
