@@ -15,22 +15,22 @@ function listToArray(list, arr=[]) {
 	return arr;
 }
 
-console.log(
-	listToArray({
-		value: 10,
-		rest: {
-			value: 20, 
-			rest: {
-				value: 30, 
-				rest: {
-					value: 40, 
-					rest: null
-				}
-			}
-		}
-	})
-);
-console.log(arrayToList([10, 20, 30, 40])); 
+// console.log(
+// 	listToArray({
+// 		value: 10,
+// 		rest: {
+// 			value: 20, 
+// 			rest: {
+// 				value: 30, 
+// 				rest: {
+// 					value: 40, 
+// 					rest: null
+// 				}
+// 			}
+// 		}
+// 	})
+// );
+console.log(listToArray(arrayToList([10, 20, 30, 40]))[1]); 
 // { 
 // 	value: 10, 
 // 	rest: {
