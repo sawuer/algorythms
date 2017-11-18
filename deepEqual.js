@@ -1,16 +1,16 @@
 const deepEqual = (a, b) => {
-	var aKeys = Object.keys(a), bKeys = Object.keys(b);
-	for (var i = 0; i < aKeys.length; i++) {
-		// console.log(a[aKeys[i]], b[bKeys[i]])
-		if (a[aKeys[i]] !== b[bKeys[i]] && typeof a[aKeys[i]] !== 'object' && typeof b[bKeys[i]] !== 'object') {
-			return false;
-		} else {
-			return deepEqual(a[aKeys[i]], b[bKeys[i]]);
-		}
+	var aK = Object.keys(a), bK = Object.keys(b);
+	for (var i = 0; i < aK.length; i++) {
+		if (
+			typeof a[aK[i]] !== 'object' && 
+			typeof b[bK[i]] !== 'object' && 
+			a[aK[i]] !== b[bK[i]] || 
+			typeof a[aK[i]] !== typeof b[bK[i]]
+		) return false;
+		return deepEqual(a[aK[i]], b[bK[i]]);
 	}
 	return true;
 };
-
 
 
 
@@ -44,10 +44,12 @@ var obj3 = {
 	},
 };
 
-console.log(deepEqual(obj, obj2)); // true
-console.log(deepEqual(obj, obj3)); // false
-// → true
-// console.log(deepEqual(obj, {here: {is: 'an'}, object: 2}));
-// // → true
-// console.log(deepEqual(obj, {here: 1, object: 2}));
-// → false
+console.log('Test1', deepEqual(obj, obj)); // true
+	console.log('')
+console.log('Test2', deepEqual(obj, obj2)); // true
+	console.log('')
+console.log('Test3', deepEqual(obj, obj3)); // false
+	console.log('')
+console.log('Test4', deepEqual(obj, {here: {is: 'an'}, object: 232})); // false
+	console.log('')
+console.log('Test5', deepEqual(obj, {here: 1, object: 2})); // false
