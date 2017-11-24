@@ -1,7 +1,4 @@
-function recurring(str) {
-	return str.split('')[[...new Set(str)].length] || null;
-}
-
+const recurring = str => str[new Set(str).size] || null;﻿
 
 console.log(recurring('abcca'))
 console.log(recurring('bcaba'))
